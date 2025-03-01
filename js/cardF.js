@@ -1,13 +1,18 @@
 const taskOne = document.getElementById('task-1');
 const TaskName1 = document.getElementById('task-name-1');
+
 const taskTwo = document.getElementById('task-2');
 const TaskName2 = document.getElementById('task-name-2');
+
 const taskThree = document.getElementById('task-3');
 const TaskName3 = document.getElementById('task-name-3');
+
 const taskFour = document.getElementById('task-4');
 const TaskName4 = document.getElementById('task-name-4');
+
 const taskFive = document.getElementById('task-5');
 const TaskName5 = document.getElementById('task-name-5');
+
 const taskSix = document.getElementById('task-6');
 const TaskName6 = document.getElementById('task-name-6');
 
@@ -42,10 +47,10 @@ function completeTask(task) {
 
       alert("Task completed!");
 
-      // Disable the clicked task button and remove background color
+      // Disable the clicked task button and add dark bg
       task.button.disabled = true;
-      task.button.classList.remove('bg-blue-500'); // Remove any existing background color class
-      task.button.classList.add('bg-none'); // Or use 'bg-transparent' if you want a transparent background
+      task.button.classList.remove('bg-blue-500');
+      task.button.classList.add('bg-gray-600'); 
     } else {
       alert("No tasks remaining or invalid task count.");
     }
