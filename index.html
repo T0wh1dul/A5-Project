@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC-5</title>
+    <!-- cnd -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .clickable-div {
+            transition: transform 0.3s ease;
+        }
+
+        .clickable-div:hover {
+            transform: scale(1.1);
+            /* Zoom in on hover */
+        }
+    </style>
+
+</head>
+
+<body class="m-auto p-3 ">
+    <header class=" rounded-lg p-3 m-2  shadow-xl bg-white">
+        <nav class="flex justify-between ">
+
+            <div class="flex items-center gap-2  clickable-div">
+                <div><img src="assets/logo.png" alt=""></div>
+                <div class="text-2xl">Dev<span class="font-bold">Board</span></div>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div><img src="assets/checkbox.png" alt=""></div>
+                    <div>23</div>
+                </div>
+                <div class=""> <button class="clickable-div"><img id="changeColorButton" src="assets/theme-btn.png" alt=""></button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="rounded-lg p-3 m-2  shadow-xl flex">
+
+        <!-- taskbar -->
+        <div class="w-3/4 rounded-lg p-3 m-2  shadow-xl flex items-center  bg-white">
+
+            <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
+                <div class="flex items-center gap-5">
+                    <div> <img src="assets/checkbox.png" alt=""></div>
+                    <div>
+                        <div>Task Assigned</div>
+                        <div class="font-bold">05</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="next-page"
+                class="clickable-div   mx-2 flex justify-start p-2 bg-gradient-to-r from-blue-600 to-purple-200 rounded-lg w-2/4">
+                <div class="flex items-center gap-5">
+                    <div> <img class="border border-dashed border-gray-300" src="assets/board.png" alt=""></div>
+                    <div>
+                        <div class="text-gray-50">Discover Something <br> New Today!</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
+                <div class="flex items-center gap-5">
+                    <div> <img src="assets/calender.png" alt=""></div>
+                    <div>
+                        <div>Wed,<br><span class="font-bold">mar 2 2025</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- grid part -->
+
+        <div>
+
+
+
+        </div>
+
+
+        <!-- activity log -->
+        <div class="w-1/4 rounded-lg p-3 m-2  shadow-xl  bg-white">
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <script src="js/bgColor.js"></script>
+    <script src="js/nextpage.js"></script>
+</body>
+
+</html>
