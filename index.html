@@ -34,57 +34,181 @@
             <div class="flex items-center gap-8">
                 <div class="flex items-center gap-2">
                     <div><img src="assets/checkbox.png" alt=""></div>
-                    <div>23</div>
+                    <div id="taskAdd">23</div>
                 </div>
-                <div class=""> <button class="clickable-div"><img id="changeColorButton" src="assets/theme-btn.png" alt=""></button>
+                <div class=""> <button class="clickable-div"><img id="changeColorButton" src="assets/theme-btn.png"
+                            alt=""></button>
                 </div>
             </div>
 
         </nav>
     </header>
 
-    <section class="rounded-lg p-3 m-2  shadow-xl flex">
+    <section class="rounded-lg p-3 m-2   flex ">
 
-        <!-- taskbar -->
-        <div class="w-3/4 rounded-lg p-3 m-2  shadow-xl flex items-center  bg-white">
+        <div class="w-3/4 ">
+            <!-- taskbar -->
+            <div class="rounded-lg p-3 m-2   shadow-xl flex items-center  bg-white">
 
-            <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
-                <div class="flex items-center gap-5">
-                    <div> <img src="assets/checkbox.png" alt=""></div>
-                    <div>
-                        <div>Task Assigned</div>
-                        <div class="font-bold">05</div>
+                <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
+                    <div class="flex items-center gap-5">
+                        <div> <img src="assets/checkbox.png" alt=""></div>
+                        <div>
+                            <div>Task Assigned</div>
+                            <div id="task-assigned" class="font-bold">06</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="next-page"
+                    class="clickable-div   mx-2 flex justify-start p-2 bg-gradient-to-r from-blue-600 to-purple-200 rounded-lg w-2/4">
+                    <div class="flex items-center gap-5">
+                        <div> <img class="border border-dashed border-gray-300" src="assets/board.png" alt=""></div>
+                        <div>
+                            <div class="text-gray-50">Discover Something <br> New Today!</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
+                    <div class="flex items-center gap-5">
+                        <div> <img src="assets/calender.png" alt=""></div>
+                        <div>
+                            <div>Wed,<span class="font-bold"> mar 2 2025</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <br>
+
+            <!-- grid part -->
+
+            <div class="grid grid-cols-3 gap-3">
+
+                <div class="max-w-xs bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">ShopEase</span>
+                    </div>
+                    <h2 id="task-name-1" class="text-xl font-semibold mb-2">Fix Mobile Button Issue</h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Debug using Chrome, check for overlapping -</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-1"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
                     </div>
                 </div>
 
-            </div>
-
-            <div id="next-page"
-                class="clickable-div   mx-2 flex justify-start p-2 bg-gradient-to-r from-blue-600 to-purple-200 rounded-lg w-2/4">
-                <div class="flex items-center gap-5">
-                    <div> <img class="border border-dashed border-gray-300" src="assets/board.png" alt=""></div>
-                    <div>
-                        <div class="text-gray-50">Discover Something <br> New Today!</div>
+                <div class="max-w-xs bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">CloudSync</span>
+                    </div>
+                    <h2 id="task-name-2" class="text-xl font-semibold mb-2">Add Dark Mode</h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Store the user's preference in localStorage, update CSS
+                            variables dynamically, and apply a smooth transition effect.-</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-2"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
                     </div>
                 </div>
 
-            </div>
-
-            <div class="clickable-div  mx-2 flex justify-between p-2 w-1/4">
-                <div class="flex items-center gap-5">
-                    <div> <img src="assets/calender.png" alt=""></div>
-                    <div>
-                        <div>Wed,<br><span class="font-bold">mar 2 2025</span></div>
+                <div class="max-w-xs  bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">SwiftPay</span>
+                    </div>
+                    <h2 id="task-name-3" class="text-xl font-semibold mb-2">Optimize Home page </h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Debug using Chrome DevTools, check for overlapping elements,
+                            and ensure onClick works properly-</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-3"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
                     </div>
                 </div>
 
+                <div class="max-w-xs bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">Meta</span>
+                    </div>
+                    <h2 id="task-name-4" class="text-xl font-semibold mb-2">Add new emoji 🤲</h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly-</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-4"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
+                    </div>
+                </div>
+
+                <div class="max-w-xs bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">Google LLC</span>
+                    </div>
+                    <h2 id="task-name-5" class="text-xl font-semibold mb-2">Integrate OpenAI API </h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly--</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-5"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
+                    </div>
+                </div>
+
+                <div class="max-w-xs bg-white rounded-lg shadow-lg p-4 clickable-div">
+                    <div class="bg-blue-100 rounded-md py-1 px-2 mb-4 inline-block">
+                        <span class="text-sm font-semibold text-blue-700">Glassdoar</span>
+                    </div>
+                    <h2 id="task-name-6" class="text-xl font-semibold mb-2">Improve Job searching </h2>
+                    <div class="bg-gray-100 rounded-md p-2 mb-4">
+                        <p class="text-sm text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly--</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-xs text-gray-500">Deadline</p>
+                            <p class="text-sm font-medium">21 March 2025</p>
+                        </div>
+                        <button id="task-6"
+                            class="bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4 text-sm font-semibold">Completed</button>
+                    </div>
+                </div>
+
+
+
+
             </div>
 
-        </div>
 
-        <!-- grid part -->
-
-        <div>
 
 
 
@@ -92,18 +216,36 @@
 
 
         <!-- activity log -->
-        <div class="w-1/4 rounded-lg p-3 m-2  shadow-xl  bg-white">
+        <div class="w-1/4 rounded-lg p-3 m-2  shadow-xl  bg-white ">
+
+            <div class=" flex flex-col gap-6">
+                <h2 class="flex  justify-center gap-3"> <img src="assets/activity.png" alt=""> <span
+                        class="font-bold text-gray-700">Activity Log</span>
+
+                </h2>
+                <button id="clear-btn" class="btn btn-soft btn-primary">Clear History</button>
+
+            </div>
+            <!-- h line -->
+            <div class="border border-b border-dashed border-gray-300 my-2">
+            </div>
+
+            <h3 id="add-activity" class="m-2 p-2"> </h3>
+
 
 
         </div>
 
     </section>
 
+    <!--  -->
 
 
 
     <script src="js/bgColor.js"></script>
     <script src="js/nextpage.js"></script>
+    <script src="js/cardF.js"></script>
+    <!-- <script src="js/clear.js" ></script> -->
 </body>
 
 </html>
