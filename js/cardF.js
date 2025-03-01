@@ -22,51 +22,51 @@ const addActivity = document.getElementById('add-activity');
 const clearActivity = document.getElementById('clear-btn');
 
 const tasks = [
-  { button: taskOne, name: TaskName1 },
-  { button: taskTwo, name: TaskName2 },
-  { button: taskThree, name: TaskName3 },
-  { button: taskFour, name: TaskName4 },
-  { button: taskFive, name: TaskName5 },
-  { button: taskSix, name: TaskName6 }
+    { button: taskOne, name: TaskName1 },
+    { button: taskTwo, name: TaskName2 },
+    { button: taskThree, name: TaskName3 },
+    { button: taskFour, name: TaskName4 },
+    { button: taskFive, name: TaskName5 },
+    { button: taskSix, name: TaskName6 }
 ];
 
 function completeTask(task) {
-  if (confirm(`Mark "${task.name.textContent}" task as completed?`)) {
-    let currentTaskCount = parseInt(taskReduce.textContent);
+    if (confirm(`Mark "${task.name.textContent}" task as completed?`)) {
+        let currentTaskCount = parseInt(taskReduce.textContent);
 
-    if (!isNaN(currentTaskCount) && currentTaskCount > 0) {
-      taskReduce.textContent = currentTaskCount - 1;
+        if (!isNaN(currentTaskCount) && currentTaskCount > 0) {
+            taskReduce.textContent = currentTaskCount - 1;
 
-      let completedTaskCount = parseInt(taskAdD.textContent) || 0;
-      taskAdD.textContent = completedTaskCount + 1;
+            let completedTaskCount = parseInt(taskAdD.textContent) || 0;
+            taskAdD.textContent = completedTaskCount + 1;
 
-      const completedTaskPara = document.createElement('p');
-      completedTaskPara.classList.add('m-2', 'p-2');
-      completedTaskPara.textContent = task.name.textContent;
-      addActivity.appendChild(completedTaskPara);
+            const completedTaskPara = document.createElement('p');
+            completedTaskPara.classList.add('m-2', 'p-2');
+            completedTaskPara.textContent = task.name.textContent = `You have completed "${task.name.textContent}"`;
+            addActivity.appendChild(completedTaskPara);
 
-      alert("Task completed!");
+            alert("Task completed!");
 
-      // Disable the clicked task button and add dark bg
-      task.button.disabled = true;
-      task.button.classList.remove('bg-blue-500');
-      task.button.classList.add('bg-gray-600'); 
-    } else {
-      alert("No tasks remaining or invalid task count.");
+            // Disable the clicked task button and add dark bg
+            task.button.disabled = true;
+            task.button.classList.remove('bg-blue-500');
+            task.button.classList.add('bg-gray-600');
+        } else {
+            alert("No tasks remaining or invalid task count.");
+        }
     }
-  }
 }
 
 tasks.forEach(task => {
-  if (task.button) {
-    task.button.addEventListener('click', function () {
-      completeTask(task);
-    });
-  }
+    if (task.button) {
+        task.button.addEventListener('click', function () {
+            completeTask(task);
+        });
+    }
 });
 
 clearActivity.addEventListener('click', function () {
-  while (addActivity.firstChild) {
-    addActivity.removeChild(addActivity.firstChild);
-  }
+    while (addActivity.firstChild) {
+        addActivity.removeChild(addActivity.firstChild);
+    }
 });
