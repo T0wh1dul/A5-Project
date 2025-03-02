@@ -30,6 +30,7 @@ const tasks = [
     { button: taskSix, name: TaskName6 }
 ];
 
+
 function completeTask(task) {
     if (confirm(`Mark "${task.name.textContent}" task as completed?`)) {
         let currentTaskCount = parseInt(taskReduce.textContent);
@@ -51,6 +52,7 @@ function completeTask(task) {
             task.button.disabled = true;
             task.button.classList.remove('bg-blue-500');
             task.button.classList.add('bg-gray-600');
+
         } else {
             alert("No tasks remaining or invalid task count.");
         }
@@ -70,3 +72,7 @@ clearActivity.addEventListener('click', function () {
         addActivity.removeChild(addActivity.firstChild);
     }
 });
+
+
+
+
