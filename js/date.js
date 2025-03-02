@@ -8,7 +8,7 @@ function displayDate() {
   if (dateElement) {
     dateElement.textContent = formattedDate;
   } else {
-    console.error("Element with id 'dateDisplay' not found.");
+    console.error("Id not found.");
   }
 }
 displayDate();
